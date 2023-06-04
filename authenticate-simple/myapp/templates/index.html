@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Pagina Inicial{% endblock %}
+
+{% block content %}
+	<div class="container">   
+		{% if user.is_authenticated %}
+			<h1>Bienvenido, {{user.username}}</h1>  
+		{% endif %} 
+		
+	</div>
+{% endblock %}

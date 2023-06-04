@@ -1,0 +1,38 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}Perfil Usuario{% endblock %}
+
+
+
+{% block content %}
+<h2>Mis Citas</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre Medico</th>
+            <th>Fecha de la Cita</th>
+            <th>Hora de la Cita</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in citas %}
+        <tr>
+            <td>{{ c.nombre_medico }}</td>
+            <td>{{ c.fecha }}</td>
+            <td>{{ c.hora }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+
+{% endblock %}
+
+
+
+{% load static %}
